@@ -8,6 +8,6 @@ Landing page and dashboard for the Vader Flix media server.
 - Port: 8091
 
 ## Notes
-- Requires portal-data directory for container bind mount 
+- Requires portal-data directory for container bind mount
 
-testtest test
+hook test
