@@ -33,14 +33,19 @@ const StyledPaper = styled(Paper)`
   width: 100%;
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled('a')`
   margin-top: 2rem;
   padding: 1rem 2rem;
   font-size: 1.2rem;
-  background-color: #FFE81F !important;
-  color: #000000 !important;
+  background-color: #FFE81F;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   &:hover {
-    background-color: #FFD700 !important;
+    background-color: #FFD700;
   }
 `;
 
@@ -60,12 +65,8 @@ const LandingPage: React.FC = () => {
           Join the Empire today and experience entertainment like never before.
         </Typography>
         <Box display="flex" justifyContent="center">
-          <StyledButton
-            variant="contained"
-            startIcon={<PlayArrowIcon />}
-            size="large"
-          >
-            Enter the Portal
+          <StyledButton href="http://192.168.50.92:5055">
+            <PlayArrowIcon /> Enter the Portal
           </StyledButton>
         </Box>
       </StyledPaper>
