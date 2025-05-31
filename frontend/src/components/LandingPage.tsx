@@ -29,7 +29,7 @@ const LandingPage: React.FC = () => {
           Submit to the Empire's superior collection. Resistance is futile.
         </Typography>
         <Box display="flex" justifyContent="center">
-          <StyledButton href="http://192.168.50.92:5055">
+        <StyledButton href="https://overseerr.vaderflix.synology.me">
             ⚔ OBEY
           </StyledButton>
         </Box>

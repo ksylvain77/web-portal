@@ -8,8 +8,8 @@ services:
       - PUID=1027
       - PGID=65536
       - TZ=America/New_York
-    volumes:
-      - /volume1/docker/projects/vader-flix-webapp:/usr/share/nginx/html
+    # volumes:
+    #   - /volume1/docker/projects/vader-flix-webapp:/usr/share/nginx/html
     ports:
       - 8091:80
     networks:
