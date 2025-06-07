@@ -16,3 +16,6 @@ hook test# Test push Sat May 31 02:32:52 PM EDT 2025
 # Test push Sat May 31 02:47:50 PM EDT 2025
 # Test push Sat May 31 02:51:41 PM EDT 2025
 # Test push Sat May 31 02:59:31 PM EDT 2025
+
+## Testing
+Currently testing new landing page styling and Docker configuration.
