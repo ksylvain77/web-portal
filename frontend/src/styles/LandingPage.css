@@ -68,9 +68,7 @@
   padding: 0 20px;
   margin: 20px 0;
   perspective: 600px;
-  height: 420px; /* Increased height */
-  min-height: 320px; /* Increased min-height */
-  max-height: 520px; /* Increased max-height */
+  height: clamp(280px, 40vh, 420px); /* Responsive height */
   width: 100%;
   max-width: 900px; /* Increased max-width */
 }
@@ -83,9 +81,7 @@
   width: 100%;
   max-width: none;
   box-sizing: border-box;
-  font-size: 2.2rem; /* Increased font size */
-  min-font-size: 1.1rem;
-  max-font-size: 2.5rem;
+  font-size: clamp(1.2rem, 4vw, 2.0rem); /* Responsive font size */
   animation: crawl 30s linear forwards;
   transform-origin: 50% 100%;
   text-align: center;
