@@ -1,13 +1,12 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
-import { StyledContainer, Logo, StyledPaper, StyledButton } from '../styles/LandingPage.styles';
+import '../styles/LandingPage.css';
 
 const LandingPage: React.FC = () => {
   return (
-    <StyledContainer maxWidth={false}>
-      <Logo variant="h1">VADER FLIX</Logo>
-      <StyledPaper elevation={3}>
-        <Typography variant="h4" gutterBottom style={{ 
+    <div className="deathstar-bg">
+      <h1>VADER FLIX</h1>
+      <div>
+        <h4 style={{ 
           color: '#FF0000', 
           textAlign: 'center', 
           fontWeight: 900,
@@ -15,26 +14,26 @@ const LandingPage: React.FC = () => {
           letterSpacing: '0.2em'
         }}>
           THE EMPIRE'S ENTERTAINMENT
-        </Typography>
-        <Typography variant="body1" paragraph style={{ 
+        </h4>
+        <p style={{ 
           color: '#CCCCCC',
           textAlign: 'center' 
         }}>
           You have failed me for the last time. Your weak streaming services are no match for the power of the Dark Side.
-        </Typography>
-        <Typography variant="body1" paragraph style={{ 
+        </p>
+        <p style={{ 
           color: '#CCCCCC',
           textAlign: 'center' 
         }}>
           Submit to the Empire's superior collection. Resistance is futile.
-        </Typography>
-        <Box display="flex" justifyContent="center">
-        <StyledButton href="https://overseerr.vaderflix.synology.me">
+        </p>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <a href="https://overseerr.vaderflix.synology.me" className="enter-btn">
             ⚔ OBEY
-          </StyledButton>
-        </Box>
-      </StyledPaper>
-    </StyledContainer>
+          </a>
+        </div>
+      </div>
+    </div>
   );
 };
 
