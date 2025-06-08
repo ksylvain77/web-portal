@@ -1,7 +1,10 @@
 .deathstar-bg {
   min-height: 100vh;
   min-width: 100vw;
-  background: #000 url('../assets/ds_bg.png') no-repeat center center;
+  background: #000;
+  background-image: url('../assets/ds_bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: contain;
   display: flex;
   justify-content: center;

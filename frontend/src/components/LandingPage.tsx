@@ -16,7 +16,7 @@ const LandingPage: React.FC = () => {
           THE EMPIRE'S ENTERTAINMENT
         </h4>
         <p style={{ 
-          color: '#CCCCCC',
+          color: '#FF0000',
           textAlign: 'center' 
         }}>
           You have failed me for the last time. Your weak streaming services are no match for the power of the Dark Side.
