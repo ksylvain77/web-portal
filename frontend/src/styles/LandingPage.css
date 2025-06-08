@@ -60,12 +60,19 @@
 
 .crawl-container {
   position: relative;
-  height: 60vh;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  perspective: 1000px;
-  margin-top: -10vh;
   z-index: 2;
+  padding: 0 20px;
+  margin: 20px 0;
+  perspective: 600px;
+  height: 28vw; /* Responsive height, scales with viewport width */
+  min-height: 180px;
+  max-height: 320px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .crawl {
@@ -74,12 +81,16 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 800px;
-  font-size: 2.5rem;
+  max-width: none;
+  box-sizing: border-box;
+  font-size: 2.5vw;
+  min-font-size: 1.1rem;
+  max-font-size: 2.5rem;
+  animation: crawl 30s linear forwards;
+  transform-origin: 50% 100%;
   text-align: center;
   color: #FFD700;
   text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
-  animation: crawl 30s linear forwards;
 }
 
 .crawl p {
@@ -99,14 +110,23 @@
   animation-delay: 15s;
 }
 
+.button-container {
+  position: relative;
+  z-index: 3;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
 @keyframes crawl {
   0% {
     top: 100%;
     transform: translateX(-50%) rotateX(20deg) translateZ(0);
+    opacity: 1;
   }
   100% {
-    top: -100%;
-    transform: translateX(-50%) rotateX(25deg) translateZ(-2500px);
+    top: -120%;
+    transform: translateX(-50%) rotateX(25deg) translateZ(-300px);
+    opacity: 0.2;
   }
 }
 
@@ -127,10 +147,10 @@
 
 .enter-btn {
   opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 15s;
-  padding: 1.2rem 2.8rem;
-  font-size: 1.35rem;
+  animation: fadeInObey 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0s;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
   font-weight: bold;
   color: #fff;
   background: #222;
@@ -138,15 +158,21 @@
   border-radius: 28px;
   cursor: pointer;
   letter-spacing: 0.13em;
-  transition: background 0.2s, transform 0.2s;
-  box-shadow: 0 4px 20px #0007;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 20px 4px #ff000088, 0 4px 20px #0007;
   margin-top: 1.5rem;
   z-index: 2;
+  text-shadow: 0 0 8px #ff0000, 0 0 16px #ff0000;
 }
 
 .enter-btn:hover {
-  background: #444;
-  transform: scale(1.07);
+  background: #ff0000;
+  color: #FFD700;
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 0 40px 12px #ff0000cc, 0 4px 20px #0007;
+  text-shadow: 0 0 16px #ff0000, 0 0 32px #ff0000;
+  filter: brightness(1.15) saturate(1.2);
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s, text-shadow 0.2s, filter 0.2s;
 }
 
 @keyframes fadeIn {
@@ -158,10 +184,72 @@
   }
 }
 
+@keyframes fadeInObey {
+  0% {
+    opacity: 0;
+    filter: blur(8px) brightness(0.5);
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #ff000000;
+  }
+  60% {
+    opacity: 1;
+    filter: blur(2px) brightness(1.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 32px 8px #ff0000cc;
+  }
+  100% {
+    opacity: 1;
+    filter: none;
+    transform: scale(1);
+    box-shadow: 0 0 20px 4px #ff000088, 0 4px 20px #0007;
+  }
+}
+
+.tie-image-container {
+  position: absolute;
+  top: 32%; /* Lowered to bring the TIE fighters closer to the middle of the Death Star */
+  left: 8%; /* Move to the left side */
+  transform: rotate(18deg); /* Clockwise rotation */
+  width: 180px;
+  max-width: 40vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .tie-image-container {
+    width: 100px;
+    top: 28%; /* Lowered for mobile as well */
+    left: 2%;
+  }
+}
+
+.tie-image {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 12px #000) brightness(1.1);
+  opacity: 0.92;
+}
+
 @media screen and (max-width: 768px) {
   .text-container {
     max-width: 80vw;
     padding: 1.5rem;
+  }
+  .crawl-container {
+    height: 38vw;
+    min-height: 120px;
+    max-height: 200px;
+    padding: 0 5vw;
+  }
+  .crawl {
+    font-size: 3.5vw;
+    min-font-size: 0.9rem;
+    max-font-size: 1.5rem;
   }
 }
 
@@ -179,11 +267,50 @@
   .text-container p {
     font-size: 0.8rem;
   }
+  .crawl-container {
+    height: 48vw;
+    min-height: 80px;
+    max-height: 140px;
+    padding: 0 2vw;
+  }
+  .crawl {
+    font-size: 4vw;
+    min-font-size: 0.8rem;
+    max-font-size: 1.1rem;
+  }
+  .tie-image-container {
+    width: 140px;
+    margin-bottom: 1rem;
+  }
 }
 
 .title {
   color: #FF0000;
   margin-bottom: 0;
+  font-size: 3.2rem;
+  font-family: 'Impact', 'Haettenschweiler', 'Arial Black', 'sans-serif';
+  letter-spacing: 0.12em;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0 0 16px #ff0000,
+    0 0 32px #ff0000,
+    0 0 8px #fff;
+  filter: brightness(1.15) contrast(1.2);
+  text-transform: uppercase;
+  font-weight: 900;
+  transition: text-shadow 0.2s, filter 0.2s;
+}
+
+.title:hover {
+  text-shadow:
+    0 0 32px #ff0000,
+    0 0 64px #ff0000,
+    0 0 16px #fff,
+    0 0 4px #000;
+  filter: brightness(1.4) contrast(1.5);
 }
 
 .subtitle {
@@ -194,10 +321,19 @@
   letter-spacing: 0.2em;
   margin-top: 0.5rem;
   margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0 0 8px #ff0000,
+    0 0 16px #ff0000,
+    0 0 2px #fff;
 }
 
 .description {
   color: #FF0000;
   text-align: center;
   margin: 0;
-} 
+}

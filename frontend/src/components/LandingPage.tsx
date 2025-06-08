@@ -12,6 +12,8 @@ const LandingPage: React.FC = () => {
           THE EMPIRE'S ENTERTAINMENT
         </h4>
       </div>
+      
+      {/* Repositioning the crawl to ensure it's visible on mobile */}
       <div className="crawl-container">
         <div className="crawl">
           <p>
@@ -22,10 +24,15 @@ const LandingPage: React.FC = () => {
           </p>
         </div>
       </div>
-      <div style={{ position: 'relative', zIndex: 2 }}>
+      
+      <div className="button-container">
         <a href={OVERSEERR_URL} className="enter-btn">
           ⚔ OBEY
         </a>
+      </div>
+
+      <div className="tie-image-container">
+        <img src={require('../assets/ties.png')} alt="TIE Fighters" className="tie-image" />
       </div>
     </div>
   );
