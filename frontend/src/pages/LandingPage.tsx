@@ -3,9 +3,14 @@ import '../styles/LandingPage.css';
 
 const LandingPage: React.FC = () => {
   return (
-    <div>
-      <h1>VADER FLIX</h1>
-      <div>
+    <div className="deathstar-bg">
+      <img 
+        src="/src/assets/ds_bg.png" 
+        alt="Death Star" 
+        className="deathstar-image"
+      />
+      <div className="text-container">
+        <h1>VADER FLIX</h1>
         <h4 style={{ 
           color: '#FF0000', 
           textAlign: 'center', 
@@ -28,7 +33,7 @@ const LandingPage: React.FC = () => {
           Submit to the Empire's superior collection. Resistance is futile.
         </p>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <a href="https://overseerr.vaderflix.synology.me">
+          <a href="https://overseerr.vaderflix.synology.me" className="enter-btn">
             ⚔ OBEY
           </a>
         </div>

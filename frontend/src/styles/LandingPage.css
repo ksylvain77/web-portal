@@ -3,15 +3,21 @@
   min-height: 100vh;
   min-width: 100vw;
   background-color: #000;
-  background-image: url('../assets/ds_bg.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 70vw auto;
-  background-blend-mode: normal;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.deathstar-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .deathstar-overlay {
