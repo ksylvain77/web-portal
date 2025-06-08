@@ -7,8 +7,8 @@ const LandingPage: React.FC = () => {
     <div className="deathstar-bg">
       <div className="deathstar-overlay" />
       <div className="header-container">
-        <h1 className="title">VADER FLIX</h1>
-        <h4 className="subtitle">
+        <h1 className="vaderflix-title">VADER FLIX</h1>
+        <h4 className="vaderflix-subtitle">
           THE EMPIRE'S ENTERTAINMENT
         </h4>
       </div>
