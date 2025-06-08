@@ -1,11 +1,12 @@
 import React from 'react';
 import '../styles/LandingPage.css';
+import deathStarImage from '../assets/ds_bg.png';
 
 const LandingPage: React.FC = () => {
   return (
     <div className="deathstar-bg">
       <img 
-        src="/src/assets/ds_bg.png" 
+        src={deathStarImage}
         alt="Death Star" 
         className="deathstar-image"
       />
