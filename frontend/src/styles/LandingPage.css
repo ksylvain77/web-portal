@@ -3,21 +3,14 @@
   min-height: 100vh;
   min-width: 100vw;
   background-color: #000;
+  background-image: url('../assets/ds_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-}
-
-.deathstar-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70vw;
-  height: auto;
-  z-index: 1;
-  pointer-events: none;
 }
 
 .deathstar-overlay {
@@ -62,4 +55,27 @@
 .enter-btn:hover {
   background: #444;
   transform: scale(1.07);
+}
+
+@media screen and (max-width: 768px) {
+  .text-container {
+    max-width: 80vw;
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-container {
+    max-width: 85vw;
+    padding: 1rem;
+  }
+  .text-container h1 {
+    font-size: 2rem;
+  }
+  .text-container h4 {
+    font-size: 0.9rem;
+  }
+  .text-container p {
+    font-size: 0.8rem;
+  }
 } 
