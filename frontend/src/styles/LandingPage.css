@@ -2,11 +2,12 @@
   position: relative;
   min-height: 100vh;
   min-width: 100vw;
-  background: #000;
+  background-color: #000;
   background-image: url('../assets/ds_bg.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 70vw auto;
+  background-blend-mode: normal;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,8 +20,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.75);
   z-index: 1;
+  pointer-events: none;
 }
 
 .text-container {
