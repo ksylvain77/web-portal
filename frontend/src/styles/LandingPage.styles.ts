@@ -22,20 +22,14 @@ export const StyledContainer = styled.div`
 
 export const BackgroundImage = styled.div`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  background: url('https://tse2.mm.bing.net/th?id=OIP.nKYyKp2w6VHJKFDIkzUxggHaEJ') no-repeat center/contain;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/src/assets/ds_bg.png') no-repeat center/cover;
   opacity: 0.08;
-  transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 0;
-
-  @media (max-width: 600px) {
-    width: 250px;
-    height: 250px;
-  }
 `;
 
 export const Logo = styled.h1`
