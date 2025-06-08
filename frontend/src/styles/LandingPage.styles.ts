@@ -7,17 +7,13 @@ const textColor = '#FFFFFF';
 const mutedText = '#A0A0A0';
 
 export const StyledContainer = styled.div`
-  position: relative;
-  background-color: ${background};
-  color: ${textColor};
   min-height: 100vh;
-  padding: 2rem;
-  box-sizing: border-box;
+  min-width: 100vw;
+  background: #000 url('/src/assets/ds_bg.png') no-repeat center center;
+  background-size: contain;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 `;
 
 export const BackgroundImage = styled.div`
@@ -59,22 +55,20 @@ export const StyledPaper = styled.div`
 `;
 
 export const StyledButton = styled.button`
-  background-color: ${accent};
-  color: ${textColor};
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: 1.2rem 2.8rem;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #fff;
+  background: #222;
   border: none;
-  border-radius: 4px;
+  border-radius: 28px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 1;
+  letter-spacing: 0.13em;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 20px #0007;
 
   &:hover {
-    background-color: #b0060f;
-  }
-
-  @media (max-width: 600px) {
-    width: 100%;
-    max-width: 300px;
+    background: #444;
+    transform: scale(1.07);
   }
 `;

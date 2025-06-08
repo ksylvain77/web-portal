@@ -1,0 +1,28 @@
+.deathstar-bg {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #000 url('../assets/ds_bg.png') no-repeat center center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enter-btn {
+  padding: 1.2rem 2.8rem;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #fff;
+  background: #222;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  letter-spacing: 0.13em;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 20px #0007;
+}
+
+.enter-btn:hover {
+  background: #444;
+  transform: scale(1.07);
+} 
