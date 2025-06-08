@@ -4,7 +4,7 @@ import '../styles/LandingPage.css';
 const LandingPage: React.FC = () => {
   return (
     <div className="deathstar-bg">
-      <h1>VADER FLIX</h1>
+      <h1 style={{ color: '#FF0000' }}>VADER FLIX</h1>
       <div>
         <h4 style={{ 
           color: '#FF0000', 
